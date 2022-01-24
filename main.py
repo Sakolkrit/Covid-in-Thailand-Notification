@@ -27,7 +27,7 @@ async def on_message(message):
   while data[a]["province"] != data[i]["province"]:
     i = i+1
   if data[i]["province"] == message.content and data[i]["txn_date"] == data[i]["update_date"][0:10]:
-    await message.channel.send("วันที่ update ล่าสุด: "+ data[i]["update_date"]+"\nจังหวัด: "+ data[i]["province"]+"\ncase โดยรวม: "+ str(data[i]["total_case"])+"\nผู้ติดเชื้อรายใหม่ที่ไม่ใช่จากต่างประเทศ: " + str(data[i]["new_case_excludeabroad"])+"\ncase โดยรวมที่ไม่ใช่จากต่างประเทศ: "+ str(data[i]["total_case_excludeabroad"])+"\nจำนวนผู้เสียชีวิตรายใหม่: "+ str(data[i]["new_death"])+"\nจำนวนผู้เสียชีวิตโดยรวม: " + str(data[i]["total_death"]))
+    await message.channel.send("วันที่ update ล่าสุด: "+ data[i]["update_date"]+"\nจังหวัด: "+ data[i]["province"]+"\nผู้ติดเชื้อรายใหม่: "+str(data[i]["new_case"])+"\ncase โดยรวม: "+ str(data[i]["total_case"])+"\nผู้ติดเชื้อรายใหม่ที่ไม่ใช่จากต่างประเทศ: " + str(data[i]["new_case_excludeabroad"])+"\ncase โดยรวมที่ไม่ใช่จากต่างประเทศ: "+ str(data[i]["total_case_excludeabroad"])+"\nจำนวนผู้เสียชีวิตรายใหม่: "+ str(data[i]["new_death"])+"\nจำนวนผู้เสียชีวิตโดยรวม: " + str(data[i]["total_death"]))
 
 
   else:
