@@ -24,6 +24,9 @@ async def on_message(message):
   a = i
   while str(data[i]["update_date"][0:10]) != str(now.date()) or data[a]["province"] != data[i]["province"]:
     i=i+1
+    if i == len(data):
+        i=i-77
+        break
   while data[a]["province"] != data[i]["province"]:
     i = i+1
   if data[i]["province"] == message.content and data[i]["txn_date"] == data[i]["update_date"][0:10]:
